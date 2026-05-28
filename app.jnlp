@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0+" codebase="https://therealturtlegod855.github.io/jwebtest" href="app.jnlp">
+    <information>
+        <title>aturtlegods test web java</title>
+        <vendor>aturtlegod</vendor>
+        <description>My First Java Web Start App Deployment</description>
+    </information>
+    <resources>
+        <!-- OpenWebStart pulls Java Runtime Environment 8 or newer if missing -->
+        <j2se version="1.8+" />
+        <jar href="my-app.jar" main="true" />
+    </resources>
+    <application-desc main-class="io.github.aturtlegod.Main">
+    </application-desc>
+</jnlp>
