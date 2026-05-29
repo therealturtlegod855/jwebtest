@@ -1,15 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Updated codebase to target your live GitHub Pages testing environment -->
 <jnlp spec="1.0+" codebase="https://therealturtlegod855.github.io/jwebtest" href="app.jnlp">
     <information>
-        <title>aturtlegods test web java</title>
+        <title>Hideout Desktop Switcher</title>
         <vendor>aturtlegod</vendor>
-        <description>My First Java Web Start App Deployment</description>
+        <description>Isolated Windows desktop environment utility</description>
+        <offline-allowed/>
     </information>
+    
+    <security>
+        <!-- Mandatory: Allows the downloaded application to escape the JVM sandbox and call PowerShell -->
+        <all-permissions/>
+    </security>
+    
     <resources>
-        <!-- OpenWebStart pulls Java Runtime Environment 8 or newer if missing -->
-        <j2se version="1.8+" />
+        <!-- Supports Java 8 or newer clients -->
+        <java version="1.8+" />
+        <!-- Links directly to your self-contained Kotlin JAR -->
         <jar href="my-app.jar" main="true" />
     </resources>
-    <application-desc main-class="io.github.aturtlegod.Main">
-    </application-desc>
+    
+    <!-- Directs the runner to your compiled Kotlin main entry point -->
+    <application-desc main-class="io.github.aturtlegod.MainKt"/>
 </jnlp>
